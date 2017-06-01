@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lazyload</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .layout {
+            width: 900px;
+            height: 20px;
+            margin: 0 auto;
+            font-size: 0;
+            margin-top: 60px;
+        }
+        .layout li {
+            width: 260px;
+            height: 260px;
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .layout li img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <ul>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i4/1852830294/TB23y3ohYFlpuFjy0FgXXbRBVXa_!!1852830294.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i1/TB1seCcPpXXXXXEXFXXYXGcGpXX_M2.SS2_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i3/26057662/T2fCsvXK0aXXXXXXXX_!!26057662.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i4/1159606034639014798/TB2iR0xoMxlpuFjy0FoXXa.lXXa_!!0-saturn_solar.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i1/72866060/TB2U463sZtnpuFjSZFvXXbcTpXa_!!72866060.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i4/26261520/TB2ihIAghBmpuFjSZFsXXcXpFXa_!!26261520.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i2/784030194/TB2FHojtVXXXXaTXXXXXXXXXXXX_!!784030194.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i2/1577406007551260139/TB2bLRAkgNlpuFjy0FfXXX3CpXa_!!0-saturn_solar.jpg_250x250.jpg" alt=""></li>
+        <li><img src='120.gif' data-src="https://img.alicdn.com/bao/uploaded/i2/1852830294/TB25tUumB8lpuFjSspaXXXJKpXa_!!1852830294.jpg_250x250.jpg" alt=""></li>
+        <li><img id = 'aa'src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i4/1852830294/TB23y3ohYFlpuFjy0FgXXbRBVXa_!!1852830294.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i1/TB1seCcPpXXXXXEXFXXYXGcGpXX_M2.SS2_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i3/26057662/T2fCsvXK0aXXXXXXXX_!!26057662.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i3/26057662/T2fCsvXK0aXXXXXXXX_!!26057662.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i2/784030194/TB2FHojtVXXXXaTXXXXXXXXXXXX_!!784030194.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i2/1852830294/TB25tUumB8lpuFjSspaXXXJKpXa_!!1852830294.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i4/1852830294/TB23y3ohYFlpuFjy0FgXXbRBVXa_!!1852830294.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i2/1349006053616854159/TB2OhvXrMxlpuFjy0FoXXa.lXXa_!!0-saturn_solar.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i4/2460596343/TB2IxvHdR0kpuFjy1XaXXaFkVXa_!!2460596343.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i3/1925405003051005997/TB2Y4uTeipnpuFjSZFIXXXh2VXa_!!0-saturn_solar.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i1/72866060/TB2U463sZtnpuFjSZFvXXbcTpXa_!!72866060.jpg_250x250.jpg'></li>
+        <li><img src="120.gif" data-src='https://img.alicdn.com/bao/uploaded/i2/1852830294/TB25tUumB8lpuFjSspaXXXJKpXa_!!1852830294.jpg_250x250.jpg'></li>
+    </ul>
+</div>
+<script src='jquery-3.2.1.js'></script>
+<script>
+    checkShow()
+    $(window).on('scroll',function () {
+      setTimeout(function () {
+        checkShow()
+      },1000)
+    })
+
+
+
+    function isShow($node) {
+      if($(window).height()+$(window).scrollTop()>$node.offset().top+$node.outerHeight(true)&&$(window).scrollTop()<$node.offset().top){
+        return true
+      }else{
+        return false
+      }
+    }
+
+
+    function show($node) {
+      $node.attr('src',$node.attr('data-src'))
+    }
+
+
+    function checkShow() {
+      $('img').each(function () {
+        if(isShow($(this))){
+          show($(this))
+        }
+      })
+    }
+</script>
+</body>
+</html>
